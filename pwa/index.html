@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA Auth Example</title>
+  <link rel="manifest" href="manifest.json">
+  <script src="https://cdn.jsdelivr.net/npm/keycloak-js@22.0.4/dist/keycloak.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsotp@1.0.4/lib/jsotp.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <h1>PWA Auth Example</h1>
+  <button id="login-keycloak">Login with Keycloak</button>
+  <div id="otp-area">
+    <p>Or enter OTP from your password manager:</p>
+    <input type="text" id="otp" placeholder="Enter OTP" />
+    <button id="otp-submit">Submit OTP</button>
+  </div>
+  <div id="result"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
