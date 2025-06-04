@@ -1,0 +1,8 @@
+{
+  "name": "PWA Auth Example",
+  "short_name": "AuthPWA",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Example PWA with Keycloak and OTP login"
+}
